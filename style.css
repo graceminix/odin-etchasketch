@@ -1,0 +1,16 @@
+.square {
+    float: left;
+    height: 50px;
+    width: 6.25%;
+    color: white;
+    background-color: black;
+}
+
+#grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.etch {
+    background-color: pink;
+}
