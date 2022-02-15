@@ -1,16 +1,34 @@
-.square {
-    float: left;
+.square,
+.etch {
     width: 6.25%;
-    height: 50px;
-    color: white;
+    height: 6.25%;
+}
+
+.square {
     background-color: black;
 }
 
 #grid {
     display: flex;
     flex-flow: row wrap;
+    width: 750px !important;
+    height: 750px !important;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+
 }
 
 .etch {
     background-color: pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+#heh {
+    display: flex;
+    justify-content: center;
+
 }
