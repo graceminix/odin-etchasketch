@@ -1,7 +1,7 @@
 .square {
     float: left;
-    height: 50px;
     width: 6.25%;
+    height: 50px;
     color: white;
     background-color: black;
 }

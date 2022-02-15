@@ -9,9 +9,9 @@ for (i = 0; i < 16; i++) {
     }        
 }
 
-let a = document.getElementsByClassName('square')
+let box = document.getElementById('grid')
 
-a.addEventListener("mouseover", function( event ) {
+box.addEventListener("mouseover", function( event ) {
     event.target.style.background = "purple";
 }, false);
 
