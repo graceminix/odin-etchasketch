@@ -1,13 +1,6 @@
 const container = document.querySelector('#grid');
 
-
-for (i = 0; i < 16; i++) {
-    for (j = 0; j < 16; j++) {
-        var d = document.createElement('div');
-        d.classList.add('square');
-        container.appendChild(d); 
-    }        
-}
+makeGrid(16);
 
 let box = document.getElementById('grid')
 
@@ -40,5 +33,15 @@ function removeAllChildNodes(parent) {
 
 function makeGrid(number) {
     var num = Number(number);
-    
+    for (i = 0; i < num; i++) {
+        for (j = 0; j < num; j++) {
+            var d = document.createElement('div');
+            d.classList.add('square');
+            container.appendChild(d);
+        }
+    }
+    var q = 750/num;
+    container.style.setProperty('grid-template-columns', 'repeat(' + number + ', 1fr)');
+    container.style.setProperty('grid-template-rows','repeat(' + number + ', 1fr)');
+
 }

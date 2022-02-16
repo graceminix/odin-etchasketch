@@ -1,22 +1,14 @@
-.square,
-.etch {
-    width: 6.25%;
-    height: 6.25%;
-}
 
 .square {
     background-color: black;
 }
 
 #grid {
-    display: flex;
-    flex-flow: row wrap;
-    width: 750px !important;
-    height: 750px !important;
-    justify-content: center;
-    align-self: center;
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    width: 750px;
+    height: 750px;
     margin: auto;
-
 }
 
 .etch {
