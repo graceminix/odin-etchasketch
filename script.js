@@ -5,7 +5,7 @@ makeGrid(16);
 let box = document.getElementById('grid')
 
 box.addEventListener("mouseover", function( event ) {
-    event.target.className = "etch";
+    event.target.style.backgroundColor = randomColor();
 }, false);
 
 const button = document.querySelector('#heh');
@@ -20,6 +20,10 @@ function reSet() {
     var newgrid = 101;
     while (newgrid  > 100 || newgrid < 0) {
         newgrid = window.prompt("Please enter a grid size between 0 and 100!");
+    }
+    if (isNaN(parseInt(newgrid))) {
+        newgrid = 16;
+        window.alert("You must enter a positive integer!");
     }
     removeAllChildNodes(container);
     makeGrid(newgrid);
@@ -40,8 +44,15 @@ function makeGrid(number) {
             container.appendChild(d);
         }
     }
-    var q = 750/num;
     container.style.setProperty('grid-template-columns', 'repeat(' + number + ', 1fr)');
     container.style.setProperty('grid-template-rows','repeat(' + number + ', 1fr)');
 
+}
+
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+        color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
 }
